@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LOTST Awareness - OSSEC</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(135deg, #f7f9fc, #eef2f7);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .warning {
+      background: #e74c3c;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #f9fafc;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-left: 5px solid #2c3e50;
+      border-radius: 6px;
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Living Off The Security Tools (LOTST)</h1>
+    <p>Awareness for OSSEC and similar platforms</p>
+  </header>
+
+  <section>
+    <div class="warning">
+      ⚠️ This page is for awareness and education only. It does not provide attack instructions.
+    </div>
+    <h2>Concept</h2>
+    <p>
+      OSSEC is a legitimate open-source host-based intrusion detection system (HIDS). It provides log analysis, 
+      file integrity monitoring, and rootkit detection. Its agents are trusted and widely deployed. They are not malware. 
+      However, attackers may exploit the trust model by registering their own OSSEC infrastructure and convincing 
+      organizations to connect agents to it.
+    </p>
+  </section>
+
+  <section>
+    <h2>How Abuse Could Look</h2>
+    <ul>
+      <li>The agent is legitimate and installed correctly.</li>
+      <li>The attacker controls the OSSEC manager where the agent reports.</li>
+      <li>Victims believe they are monitored by a trusted security partner.</li>
+      <li>The attacker can selectively hide their own activity while reporting other attackers to appear legitimate.</li>
+      <li>This creates a false sense of security and long-term stealth.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Defensive Takeaways</h2>
+    <ul>
+      <li>Verify who controls the OSSEC manager your agents connect to.</li>
+      <li>Ensure agents are registered under your organization’s infrastructure, not a third party.</li>
+      <li>Audit dashboards and logs regularly for anomalies and hidden activity.</li>
+      <li>Treat unsolicited offers of “free monitoring” with caution.</li>
+      <li>Cross-check reported incidents with independent monitoring sources.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>LOTST Awareness Project - Educational Use Only</p>
+  </footer>
+</body>
+</html>
