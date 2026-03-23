@@ -50,9 +50,6 @@ However, attackers can exploit the trust model in a subtle way:
 
 - Forensics analysts will just use the vendor dashboard and go to recent events and they see nothing, Than they say that hack is fake but it is real, The attacker are abusing the security monitoring security software itself
 
-## 🔹 Example Tools to abuse
-[Bitdefender Gravity Zone](/lotst.github.io/bitdefender-gravity-zone.html)
-
 ## ✅ Takeaway
 
 **LOTST is a warning, not a weapon.**  
